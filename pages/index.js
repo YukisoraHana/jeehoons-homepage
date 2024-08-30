@@ -16,7 +16,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
-import { IoLogoGithub, IoLogoTwitter, IoLogoInstagram } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 export default function Page() {
   return (
     <Layout>
@@ -113,11 +113,10 @@ export default function Page() {
             <Link
               target="_blank"
               color={useColorModeValue('blue.500', 'rgb(255,99,195)')}
-              href="https://youtube.com/@wlgnstla"
+              href="https://x.com/chocopieharu"
             >
-              Memes
-            </Link>
-            , Art, Games, Music,{' '}
+              Art
+            </Link>,  Games, Music,{' '}
             <Link
               target="_blank"
               color={useColorModeValue('blue.500', 'rgb(255,99,195)')}
@@ -137,6 +136,17 @@ export default function Page() {
           </div>
           <List>
             <ListItem>
+              <Link target="_blank" href="https://linkedin.com/in/jeehoonsim">
+                <Button
+                  colorScheme="teal"
+                  variant="ghost"
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  Jeehoon Sim
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
               <Link target="_blank" href="https://github.com/wlgnstla">
                 <Button
                   colorScheme="teal"
@@ -144,31 +154,6 @@ export default function Page() {
                   leftIcon={<Icon as={IoLogoGithub} />}
                 >
                   @wlgnstla
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link target="_blank" href="https://x.com/_ruchiya_">
-                <Button
-                  colorScheme="teal"
-                  variant="ghost"
-                  leftIcon={<Icon as={IoLogoTwitter} />}
-                >
-                  _ruchiya_
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/_wlgnstla_/"
-              >
-                <Button
-                  colorScheme="teal"
-                  variant="ghost"
-                  leftIcon={<Icon as={IoLogoInstagram} />}
-                >
-                  _wlgnstla_
                 </Button>
               </Link>
             </ListItem>
