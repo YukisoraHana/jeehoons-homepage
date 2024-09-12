@@ -16,7 +16,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import { IoLogoLinkedin } from 'react-icons/io5'
 export default function Page() {
   return (
     <Layout>
