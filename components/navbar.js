@@ -1,113 +1,113 @@
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
-    Container,
-    Heading,
-    Box,
-    Link,
-    Stack,
-    Flex,
-    Menu,
-    MenuItem,
-    MenuList,
-    MenuButton,
-    IconButton,
-    useColorModeValue,
+  Container,
+  Heading,
+  Box,
+  Link,
+  Stack,
+  Flex,
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuButton,
+  IconButton,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 
-const LinkItem = ({href, path, children}) => {
-    const active = path === href
-    const inActiveColor = useColorModeValue('black','whiteAlpha.900')
-    return (
-        <NextLink href={href}>
-            <Link
-            p={2}
-            bg={active ? '#88ccca' : null}
-                color={active ? '#202023' : inActiveColor}
-            >
-            {children}
-            </Link>
-        </NextLink>
-    )
+const LinkItem = ({ href, path, children }) => {
+  const active = path === href
+  const inActiveColor = useColorModeValue('black', 'whiteAlpha.900')
+  return (
+    <NextLink href={href}>
+      <Link
+        p={2}
+        bg={active ? '#88ccca' : null}
+        color={active ? '#202023' : inActiveColor}
+      >
+        {children}
+      </Link>
+    </NextLink>
+  )
 }
 
 const Navbar = (props) => {
-    const {path} = props
-    return (
+  const { path } = props
+  return (
     <Box
-    position='fixed'
-    as='nav'
-    w='100%'
-    bg={useColorModeValue('#FFFFFF40', '#20202380')}
-    style={{backdropFilter: 'blur(10px)'}}
-    zIndex={2}
-    {...props}
+      position='fixed'
+      as='nav'
+      w='100%'
+      bg={useColorModeValue('#FFFFFF40', '#20202380')}
+      style={{ backdropFilter: 'blur(10px)' }}
+      zIndex={2}
+      {...props}
     >
-        <Container 
-            display='flex'
-            p={2}
-            maxW='container.md'
-            wrap='wrap'
-            align='center'
-            justify='space-between'
-        >
+      <Container
+        display='flex'
+        p={2}
+        maxW='container.md'
+        wrap='wrap'
+        align='center'
+        justify='space-between'
+      >
         <Flex align='center' mr={5}>
-            <Heading as='h1' size='lg' letterSpacing={'tighter'}>
-                <Logo />
-            </Heading>
+          <Heading as='h1' size='lg' letterSpacing={'tighter'}>
+            <Logo />
+          </Heading>
         </Flex>
         <Stack
-            direction={{base:'column', md: 'row'}}
-            display={{base:'none', md:'flex'}}
-            width={{base:'full', md:'auto'}}
-            alignItems='center'
-            flexGrow={1}
-            mt={{base: 4, nmd: 0}}
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
+          alignItems='center'
+          flexGrow={1}
+          mt={{ base: 4, nmd: 0 }}
 
         >
-            <LinkItem href="/works" path={path}>
+          <LinkItem href="/works" path={path}>
             Works
-            </LinkItem>
-            <Link
+          </LinkItem>
+          <Link
             display='inline-flex'
-                target='_blank'
-                href='https://github.com/wlgnstla/jeehoons-homepage'
-                pl={2}
-                style={{gap:4}}
-                alignItems='center'
-            >
+            target='_blank'
+            href='https://google.com'
+            pl={2}
+            style={{ gap: 4 }}
+            alignItems='center'
+          >
             <IoLogoGithub />
             Source
-            </Link>
+          </Link>
         </Stack>
-            <Box flex={1} align='right'>
-                <ThemeToggleButton/>
-                <Box ml={2} display={{base:'inline-block', md: 'none'}}>
-                <Menu isLazy id='nav-menu'>
-                 <MenuButton as={IconButton}
-                    icon={<HamburgerIcon/>} 
-                    variant='outline' 
-                    aria-label='Options'
-                    />
-                    <MenuList>
-                        <NextLink href="/" passHref>
-                            <MenuItem as={Link}>About </MenuItem>
-                            </NextLink>
-                        <NextLink href="/works" passHref>
-                            <MenuItem as={Link}>Works </MenuItem>
-                            </NextLink>
-                        <MenuItem as={Link} target='_blank' href="https://github.com/wlgnstla/jeehoons-homepage">View Source
-                        </MenuItem>
-                        </MenuList>
-                </Menu>
-            </Box>
-            </Box>
-        </Container>
+        <Box flex={1} align='right'>
+          <ThemeToggleButton />
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu isLazy id='nav-menu'>
+              <MenuButton as={IconButton}
+                icon={<HamburgerIcon />}
+                variant='outline'
+                aria-label='Options'
+              />
+              <MenuList>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>About </MenuItem>
+                </NextLink>
+                <NextLink href="/works" passHref>
+                  <MenuItem as={Link}>Works </MenuItem>
+                </NextLink>
+                <MenuItem as={Link} target='_blank' href="https://github.com/wlgnstla/jeehoons-homepage">View Source
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box>
+      </Container>
     </Box>
-    )
+  )
 }
 
 export default Navbar
