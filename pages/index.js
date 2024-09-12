@@ -110,13 +110,7 @@ export default function Page() {
           </div>
           <Paragraph>
             Reading,{' '}
-            <Link
-              target="_blank"
-              color={useColorModeValue('blue.500', 'rgb(255,99,195)')}
-              href="https://x.com/chocopieharu"
-            >
-              Art
-            </Link>,  Games, Music,{' '}
+            Art,  Games, Music,{' '}
             <Link
               target="_blank"
               color={useColorModeValue('blue.500', 'rgb(255,99,195)')}
