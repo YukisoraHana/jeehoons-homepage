@@ -140,17 +140,6 @@ export default function Page() {
                 </Button>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link target="_blank" href="https://github.com/wlgnstla">
-                <Button
-                  colorScheme="teal"
-                  variant="ghost"
-                  leftIcon={<Icon as={IoLogoGithub} />}
-                >
-                  @wlgnstla
-                </Button>
-              </Link>
-            </ListItem>
           </List>
         </Section>
       </Container>
