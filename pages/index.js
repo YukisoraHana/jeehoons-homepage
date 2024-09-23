@@ -109,15 +109,7 @@ export default function Page() {
             <span className="section-emoji">🎏</span>
           </div>
           <Paragraph>
-            Reading,
-            Games, Music,{' '}
-            <Link
-              target="_blank"
-              color={useColorModeValue('blue.500', 'rgb(255,99,195)')}
-              href="https://www.flickr.com/photos/201195786@N08/"
-            >
-              Photography
-            </Link>
+            Reading, Drawing, Games, Music, Photography
           </Paragraph>
         </Section>
 

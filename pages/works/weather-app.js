@@ -27,7 +27,7 @@ const Work = () => {
           </ListItem>
           <ListItem>
             <Meta>Source</Meta>
-            <Link target='_blank' href='https://google.com'>
+            <Link target='_blank' href='https://github.com/wlgnstla/Weather-App'>
               https://github.com/wlgnstla/Weather-App <ExternalLinkIcon mx='2px' />
             </Link>
           </ListItem>

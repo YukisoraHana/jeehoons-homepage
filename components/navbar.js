@@ -74,7 +74,7 @@ const Navbar = (props) => {
           <Link
             display='inline-flex'
             target='_blank'
-            href='https://google.com'
+            href='https://github.com/wlgnstla/jeehoons-homepage'
             pl={2}
             style={{ gap: 4 }}
             alignItems='center'
